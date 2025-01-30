@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be811fb573f03544a5f22c8f69f8104, type: 3}
+  m_Name: WeakSword
+  m_EditorClassIdentifier: 
+  Name: WeakSword
+  AttackSpeed: 5
+  AttackPower: 1
+  Mesh: {fileID: 5426684885162492598, guid: 8e583e9185af1be4e9dd6f501e6fe7d4, type: 3}
