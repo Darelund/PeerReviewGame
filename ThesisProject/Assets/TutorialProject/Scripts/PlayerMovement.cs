@@ -7,8 +7,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Movemnt Stuff")]
     [SerializeField] private Rigidbody rb;
-    [SerializeField] private Vector3 inputVec;
-    [SerializeField] private Vector3 movementVec;
+    private Vector3 inputVec;
+    private Vector3 movementVec;
     [SerializeField] private bool isGrounded = true;
 
 
@@ -16,10 +16,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator animator;
 
 
-    private float walkSpeed = 7;
-    private float sprintSpeed = 30f;
-    private float crouchingSpeed = 1f;
-    private float airSpeed = 3f;
+    [SerializeField] private float walkSpeed = 6;
+    [SerializeField] private float sprintSpeed = 12f;
+    [SerializeField] private float crouchingSpeed = 1f;
+    [SerializeField] private float airSpeed = 3f;
     [SerializeField] private bool isSprinting = false;
     [SerializeField] private bool isCrouching = false;
     private float Speed
