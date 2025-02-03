@@ -60952,10 +60952,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  inputVec: {x: 0, y: 0, z: 0}
-  movementVec: {x: 0, y: 0, z: 0}
   isGrounded: 1
   animator: {fileID: 6085788914909847216}
+  walkSpeed: 6
+  sprintSpeed: 12
+  crouchingSpeed: 1
+  airSpeed: 3
   isSprinting: 0
   isCrouching: 0
 --- !u!114 &6085788914909847211
@@ -60996,7 +60998,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _idleSounds:
   - {fileID: 8300000, guid: 60a5e8543139a8a4586b6ab1035192e7, type: 3}
-  - {fileID: 8300000, guid: 616e0f90f03fcdd47bbfd9b4fed72f20, type: 3}
   _idleTimer: 0
 --- !u!82 &6085788914909847214
 AudioSource:
