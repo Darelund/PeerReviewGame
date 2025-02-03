@@ -1,0 +1,43 @@
+Challenge Yourself
+This is what I have done So far of the Challenge yourself tasks
+
+
+
+
+(1 Player character input)
+-A jumping mechanic using the RigidBody component
+-A crouching where the player moves slower when crouching
+-A sprinting mechanic that increases the players speed
+-Add a new Action Map for controller (Xbox or PS)
+-Add a 3rd person camera and movement and a way to swap between 1st and 3rd person
+
+
+(2 Background Sound and SFX)
+-Creating a method that plays a random sound could also be useful to add some variety to the game. Example: let’s say we want the player to randomly start to hum or whistle if we are standing still for more than 5 seconds. We want to randomly choose one of 3 different sounds and play it. How would you implement this? Challenge yourself!
+(I added some weird sounds when you haven't moved for x seconds)
+
+(3 Interaction)
+-There was nothing to add here
+
+
+
+(4 Pause menu)
+-A main menu that connects to your main scene 
+-Find a way to change the FPS of your resolution (every resolution comes with a frame rate component)
+-Change the camera POV as a setting
+-Try adding a mute button that mutes the game and reset the volume to the value it was before muting
+
+
+(6 Animations)
+-Instead of simply activating and deactivating your pause menu try animating it so it looks like it slides in and out of position
+
+
+(7 Particles)
+-Rain
+
+
+(9 Combat System)
+-Create a UI Icon which displays the cooldown on your attacks
+
+
+
