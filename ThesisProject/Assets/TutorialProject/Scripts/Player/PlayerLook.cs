@@ -21,10 +21,11 @@ public class PlayerLook : MonoBehaviour
         }
     }
 
-    [SerializeField] private Transform firstPersonCamera;
-    [SerializeField] private Transform thirdPersonCamera;
-    [SerializeField] private Transform currentCamera;
-
+    [SerializeField] private GameObject firstPersonCamera;
+    [SerializeField] private GameObject thirdPersonCamera;
+    [SerializeField] private GameObject currentCamera;
+    [SerializeField] private Transform standingPosition;
+    [SerializeField] private Transform crouchingPosition;
 
 
     private float xRotation, yRotation;
@@ -47,7 +48,7 @@ public class PlayerLook : MonoBehaviour
         xRotation -= mouseInput.y;
         xRotation = Mathf.Clamp(xRotation, -30, 45);
 
-        currentCamera.localRotation = Quaternion.Euler(xRotation, 0, 0);
+        currentCamera.transform.localRotation = Quaternion.Euler(xRotation, 0, 0);
 
         transform.rotation = Quaternion.Euler(0, yRotation, 0);
 
@@ -59,14 +60,14 @@ public class PlayerLook : MonoBehaviour
     {
         if(currentCamera == thirdPersonCamera)
         {
-            firstPersonCamera.gameObject.SetActive(true);
-            thirdPersonCamera.gameObject.SetActive(false);
+            firstPersonCamera.SetActive(true);
+            thirdPersonCamera.SetActive(false);
             currentCamera = firstPersonCamera;
         }
         else
         {
-            firstPersonCamera.gameObject.SetActive(false);
-            thirdPersonCamera.gameObject.SetActive(true);
+            firstPersonCamera.SetActive(false);
+            thirdPersonCamera.SetActive(true);
             currentCamera = thirdPersonCamera;
         }
     }
@@ -74,5 +75,18 @@ public class PlayerLook : MonoBehaviour
     public void OnLook(CallbackContext value)
     {
         mouseInput = value.ReadValue<Vector2>();
+    }
+
+    public void OnCrouch(CallbackContext value)
+    {
+        if (value.started)
+        {
+            currentCamera.transform.position = crouchingPosition.position;
+
+        }
+        else if (value.canceled)
+        {
+            currentCamera.transform.position = standingPosition.position;
+        }
     }
 }

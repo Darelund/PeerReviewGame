@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Animation")]
     [SerializeField] private Animator animator;
 
-
+    [Header("Speeds")]
     [SerializeField] private float walkSpeed = 6;
     [SerializeField] private float sprintSpeed = 12f;
     [SerializeField] private float crouchingSpeed = 1f;
